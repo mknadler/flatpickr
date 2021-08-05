@@ -60,6 +60,7 @@ export const english: Locale = {
     }
   },
   rangeSeparator: " to ",
+  rangeSeparatorInput: [" to "],
   weekAbbreviation: "Wk",
   scrollTitle: "Scroll to increment",
   toggleTitle: "Click to toggle",

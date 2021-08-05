@@ -50,6 +50,7 @@ export type Locale = {
   firstDayOfWeek: number;
   ordinal: (nth: number) => string;
   rangeSeparator: string;
+  rangeSeparatorInput: [string];
   weekAbbreviation: string;
   scrollTitle: string;
   toggleTitle: string;
@@ -66,6 +67,7 @@ export type CustomLocale = {
   daysInMonth?: Locale["daysInMonth"];
   firstDayOfWeek?: Locale["firstDayOfWeek"];
   rangeSeparator?: Locale["rangeSeparator"];
+  rangeSeparatorInput?: Locale["rangeSeparatorInput"];
   weekAbbreviation?: Locale["weekAbbreviation"];
   toggleTitle?: Locale["toggleTitle"];
   scrollTitle?: Locale["scrollTitle"];

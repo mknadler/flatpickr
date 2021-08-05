@@ -2452,9 +2452,23 @@ function FlatpickrInstance(
           break;
 
         case "range":
-          dates = inputDate
+          if (self.l10n.rangeSeparatorInput) {
+            for (let i = 0; i < self.l10n.rangeSeparatorInput.length; i++)
+              if (inputDate.indexOf(self.l10n.rangeSeparatorInput[i]) >= 0) {
+                dates = inputDate
+                  .split(self.l10n.rangeSeparatorInput[i])
+                  .map((date) => self.parseDate(date, format));
+                break;
+              }
+              else {
+                dates = [self.parseDate(inputDate, format), self.parseDate(inputDate, format)];
+              }
+          }
+          else {
+            dates = inputDate
             .split(self.l10n.rangeSeparator)
             .map((date) => self.parseDate(date, format));
+          }
 
           break;
 
